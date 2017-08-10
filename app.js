@@ -125,7 +125,7 @@ function Update(state, message) {
   case SEARCH_CHANGED: {
     const searchString = message.payload;
     const results = searchString.length > 2 ?
-      state.companies.filter(it => it.name.startsWith(searchString)) : [];
+      state.companies.filter(it => it.name.toLocaleLowerCase().startsWith(searchString.toLowerCase())) : [];
     const totalPages = Math.floor(results.length / state.resultsPerPage) + (results.length % state.resultsPerPage === 0 ? 0 : 1);
     const groupedPages = range(totalPages).reduce((acc, it) => {
       const index = it * state.resultsPerPage;
