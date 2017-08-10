@@ -4,9 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "bankai": "^8.1.1",
+    "budo": "^10.0.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "tape": "^4.8.0"
+  },
+  "scripts": {
+    "start": "budo index.js --open --port 3000",
+    "test": "node test.js"
   }
 }
