@@ -13,6 +13,9 @@ $ yarn start
 $ yarn test
 ```
 
-## Gotchas
+## Notes
 
 - Need to fix a lot of warnings
+- No integration tests
+- No JSX, no babel and no build phase
+- React as the only dependency
